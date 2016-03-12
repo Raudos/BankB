@@ -1,0 +1,390 @@
+body {
+  background-color: $grey;
+}
+.container-fluid > .row {
+  margin-left: 3em !important;
+  margin-right: 3em !important;
+}
+.table {
+  width: 100%;
+}
+// --------------------------------------------------------
+//              Slider reset for all browsers
+//---------------------------------------------------------
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+//-----------------------------------------------------------------------
+//                       First row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(1) {
+  padding: 2em 0px;
+  .logo, .search {
+    display: inline-block;
+  }
+  .search {
+    position: relative;
+    float: right;
+    form {
+      float: left;
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(-110%, -50%);
+      height: 40px;
+      input {
+        height: 40px;
+        border: 0px;
+        font-size: 1.2em;
+        text-indent: 15px;
+        color: grey;
+      }
+    }
+    .log {
+      width: 200px;
+      height: 40px;;
+      border-radius: 5px;
+      background-color: $blue;
+      float: right;
+      color: white;
+      text-align: center;
+      p {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Second row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(2) {
+  background-color: white;
+  padding: 0.5em 0px;
+  p {
+    display: inline-block;
+    padding: 0px 15px;
+    &:not(:first-child) {
+      border-left: 1px solid rgba(147, 160, 162, 0.3);
+    }
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Third row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(3) {
+  background-image: url("images/image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  .popup {
+    height: 250px;
+    width: 450px;
+    float: right;
+    background-color: $blue;
+    margin: 5em 0px 10em 0px;
+    border-radius: 10px;
+    div {
+      position: relative;
+      padding: 3em;
+      height: 100%;
+      box-sizing: border-box;
+      p, h2 {
+        color: white;
+      }
+      h2 {
+        font-size: 2em;
+      }
+      button {
+        background-color: black;
+        color: white;
+        border: 0px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 3em;
+        width: 170px;
+        height: 40px;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Fourth row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(4) {
+  background-color: white;
+  .cell {
+    padding: 5em 0px 3em 1em;
+    vertical-align: top;
+    &:first-child {
+      color: grey;
+      div {
+        float: left;
+        padding: 0.5em;
+        padding-top: 0px;
+        box-sizing: border-box;
+        img {
+          width: 100%;
+        }
+        a {
+          float: right;
+          color: $blue;
+          padding: 1em 0px;
+          font-size: 1.5em;
+        }
+        h2 {
+          font-size: 2em;
+          margin-bottom: 1em;
+          color: black;
+        }
+        &:first-child {
+          width: 30%;
+        }
+        &:last-child {
+          width: 70%;
+        }
+      }
+    }
+    &:last-child {
+      vertical-align: top;
+      h2 {
+        font-size: 2em;
+      }
+      h3 {
+        display: inline-block;
+        float: left;
+        font-size: 1.5em;
+        padding: 1em;
+        padding-left: 0px;
+        span {
+          color: $blue;
+        }
+      }
+      a {
+        float: right;
+        color: $blue;
+        padding: 1em 0px;
+        padding-right: 20%;
+        font-size: 1.5em;
+      }
+      #money, #time {
+        width: 100%;
+        p {
+          padding-top: 1em;
+          display: inline-block;
+          color: grey;
+          &:first-child {
+            float: left;
+            text-indent: 15px;
+          }
+          &:last-child {
+            float: right;
+          }
+        }
+      }
+      form {
+        width: 80%;
+        border-bottom: 1px solid $blue;
+        padding-bottom: 1em;
+      }
+      input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 12.85px 0;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 19.3px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+        background: $grey;
+        border-radius: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+      }
+      input[type=range]::-webkit-slider-thumb {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19), 0px 0px 1px rgba(13, 13, 13, 0.19);
+        border: 0px solid #000000;
+        height: 45px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: $blue;
+        background-image: url("images/thumb.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -12.85px;
+      }
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $grey;
+      }
+      input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 19.3px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+        background: $grey;
+        border-radius: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+      }
+      input[type=range]::-moz-range-thumb {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19), 0px 0px 1px rgba(13, 13, 13, 0.19);
+        border: 0px solid #000000;
+        height: 45px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: $blue;
+        background-image: url("images/thumb.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+      }
+      input[type=range]::-ms-track {
+        width: 100%;
+        height: 19.3px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      input[type=range]::-ms-fill-lower {
+        background: $grey;
+        border: 0px solid rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      }
+      input[type=range]::-ms-fill-upper {
+        background: $grey;
+        border: 0px solid rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      }
+      input[type=range]::-ms-thumb {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19), 0px 0px 1px rgba(13, 13, 13, 0.19);
+        border: 0px solid #000000;
+        height: 45px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: $blue;
+        background-image: url("images/thumb.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        height: 19.3px;
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: #3b71a9;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: #427ebc;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Fifth row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(5) {
+  background-color: black;
+  text-align: center;
+  color: white;
+  div {
+    padding: 3em 0px;
+  }
+  h2 {
+    font-size: 2.5em;
+    padding-top: 1em;
+    padding-bottom: 10px;
+  }
+  button {
+    margin-top: 2em;
+    color: white;
+    background-color: black;
+    border: 0px;
+    font-size: 1.5em;
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Sixth row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(6) {
+  background-color: white;
+  div {
+    color: grey;
+    padding: 4em;
+    h2, li {
+      padding: 0.5em 0px;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    li {
+      list-style-type: square;
+      margin-left: 1em;
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Seventh row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(7) {
+  background-color: $grey;
+  color: grey;
+  p {
+    padding: 15px 0 0 15px;
+  }
+  div {
+    &:first-child {
+
+    }
+    &:last-child {
+      text-align: right;
+      p {
+        display: inline-block;
+        padding-left: 1em;
+        padding-right: 1em;
+        &:not(:first-child) {
+          border-left: 1px solid rgba(147, 160, 162, 0.3);
+        }
+      }
+    }
+  }
+}
