@@ -5,27 +5,28 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/cssreset.css"/>
-    <link type="text/css" rel="stylesheet" href="css/myGrid/myGrid.css"/>
+    <link type="text/css" rel="stylesheet" href="css/grid/myGrid.css"/>
     <link type="text/css" rel="stylesheet" href="css/app.css"/>
   </head>
   <body>
     <div class="container-fluid">
       <header class="row">
-        <div class="logo">
+        <div class="logo col-xs-3 col-sm-3">
           <img src="css/images/logo.png" alt="bank-name" />
           <img src="css/images/logo2.png" alt="bank-logo" />
         </div>
-        <div class="search">
+        <div class="search col-xs-4 col-sm-3 col-xs-offset-1 col-sm-offset-3">
           <form>
 						<input type="text" name="search" placeholder="Szukaj">
           </form>
-          <div class="log">
-            <p>Zaloguj</p>
-          </div>
+        </div>
+        <div class="log col-xs-4 col-sm-3">
+          <p>Zaloguj</p>
         </div>
       </header>
       <nav class="row">
-        <div class="col-sm-9">
+        <div class="col-xs-6 col-sm-9">
+            <img id="burger" src="css/images/hamburger.png" alt="hamburger" />
             <p>
               Klienci indywidualni
             </p>
@@ -45,11 +46,12 @@
               Uczniowie i studenci
             </p>
         </div>
-        <div class="col-sm-2 col-sm-offset-1">
+        <div class="col-xs-6 col-sm-3">
           <h1>Bezpieczny Bank</h1>
         </div>
       </nav>
       <div class="row">
+        <img src="css/images/image.png" alt="person-sitting-on-the-rock" />
         <div class="popup">
           <div>
             <p>
@@ -62,8 +64,8 @@
       </div>
       <div class="row">
         <div class="table">
-          <div class="col-sm-5 cell">
-            <div class="">
+          <div class="col-xs-6 col-sm-6 col-md-5 cell">
+            <div class="hidden-xs">
               <img src="css/images/keys.png" alt="keys" />
             </div>
             <div class="">
@@ -74,10 +76,10 @@
               <a href="#">Dowiedz się więcej</a>
             </div>
           </div>
-          <div class="col-sm-2 cell">
+          <div class="col-xs-0 col-sm-0 col-md-2 cell">
 
           </div>
-          <div class="col-sm-5 cell">
+          <div class="col-xs-6 col-sm-6 col-md-5 cell">
             <h2>Pożyczka gotowkowa</h2>
             <form>
               <div id="money">
@@ -105,7 +107,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-xs-4 col-sm-4">
           <img src="css/images/komputor.png" alt="komputor" />
           <h2>Konto online</h2>
           <p>
@@ -113,7 +115,7 @@
           </p>
           <button type="button" name="account">Otworz konto</button>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-4 col-sm-4">
           <img src="css/images/bubble.png" alt="bubble" />
           <h2>Rozpocznij chat</h2>
           <p>
@@ -121,7 +123,7 @@
           </p>
           <button type="button" name="ask">Zapytaj</button>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-4 col-sm-4">
           <img src="css/images/%.png" alt="%" />
           <h2>Kredyt gotowkowy</h2>
           <p>
@@ -131,7 +133,7 @@
         </div>
       </div>
       <nav class="row">
-        <div class="col-sm-4">
+        <div class="col-xs-4 col-sm-4">
           <h2>Klienci indywidualni</h2>
           <ul>
             <li>Konta</li>
@@ -144,7 +146,7 @@
             <li>Bankowość elektroniczna</li>
           </ul>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-4 col-sm-4">
           <h2>Klienci VIP premium</h2>
           <ul>
             <li>Konta</li>
@@ -157,7 +159,7 @@
             <li>Bankowość elektroniczna</li>
           </ul>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-4 col-sm-4">
           <h2>Małe firmy i korporacje</h2>
           <ul>
             <li>Konta</li>
@@ -175,12 +177,7 @@
         <p>
           801 222 222
         </p>
-        <div class="col-sm-7">
-          <p>
-            © BB Bezpieczny Bank S.A. Wszelkie prawa zastrzeżone. Korzystanie z serwisu oznacza akceptacje regulaminu.
-          </p>
-        </div>
-        <div class="col-sm-5">
+        <div class="col-sm-12">
           <p>
             Mapa serwisu
           </p>
@@ -192,6 +189,11 @@
           </p>
           <p>
             Facebook
+          </p>
+        </div>
+        <div class="col-sm-12">
+          <p>
+            © BB Bezpieczny Bank S.A. Wszelkie prawa zastrzeżone. Korzystanie z serwisu oznacza akceptacje regulaminu.
           </p>
         </div>
       </footer>
