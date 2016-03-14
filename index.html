@@ -27,24 +27,26 @@
       <nav class="row">
         <div class="col-xs-6 col-sm-9">
             <img id="burger" src="css/images/hamburger.png" alt="hamburger" />
-            <p>
-              Klienci indywidualni
-            </p>
-            <p>
-              Przedsiębiorcy
-            </p>
-            <p>
-              Firmy i samorządy
-            </p>
-            <p>
-              Rolnicy
-            </p>
-            <p>
-              Korporacje
-            </p>
-            <p>
-              Uczniowie i studenci
-            </p>
+            <div id="menu">
+              <p>
+                Klienci indywidualni
+              </p>
+              <p>
+                Przedsiębiorcy
+              </p>
+              <p>
+                Firmy i samorządy
+              </p>
+              <p>
+                Rolnicy
+              </p>
+              <p>
+                Korporacje
+              </p>
+              <p>
+                Uczniowie i studenci
+              </p>
+            </div>
         </div>
         <div class="col-xs-6 col-sm-3">
           <h1>Bezpieczny Bank</h1>
@@ -86,20 +88,20 @@
               <p>
                 Kwota
               </p>
-              <p>
+              <p class="moneyInput">
                 00
               </p>
               </div>
-              <input type="range"/>
+              <input class="moneyInput" type="range"  min ="10000" max="100000" step ="1000"/>
               <div id="time">
                 <p>
                   Czas trwania
                 </p>
-                <p>
+                <p class="timeInput">
                   00
                 </p>
               </div>
-              <input type="range"/>
+              <input class="timeInput" type="range"  min ="1" max="10" step ="1"/>
             </form>
             <h3>Rata<span> 50zł</span></h3>
             <a href="#">Dowiedz się więcej</a>
