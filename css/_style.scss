@@ -8,6 +8,10 @@ body {
 .table {
   width: 100%;
 }
+* {
+  box-sizing: border-box;
+}
+
 // --------------------------------------------------------
 //              Slider reset for all browsers
 //---------------------------------------------------------
@@ -37,6 +41,11 @@ input[type=range]::-ms-track {
 
 .container-fluid > .row:nth-child(1) {
   padding: 2em 0px;
+  @for $i from 0 through 5 {
+    @media (max-width: 1300px - 200px*$i) {
+      padding: 2em - 0.3em*$i 0px;
+    }
+  }
   .logo, .search {
     display: inline-block;
     @media (max-width: 500px) {
@@ -53,38 +62,21 @@ input[type=range]::-ms-track {
     position: relative;
     form {
       width: 90%;
-
-      height: 40px;
       input {
         width: 100%;
-        height: 38px;
         border: 0px;
-        font-size: 1.2em;
-        text-indent: 15px;
+        text-indent: 5px;
         color: grey;
-        @media (max-width: 800px  ) {
-          font-size: 0.8em;
-        }
+        padding: 0.9rem;
       }
     }
   }
   .log {
-    height: 40px;;
     border-radius: 5px;
     background-color: $blue;
     color: white;
     text-align: center;
-    p {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      @media (max-width: 800px) {
-        font-size: 0.9em;
-      }
-    }
-  }
-  @media (max-width: 768px) {
-
+    padding: 1em;
   }
 }
 
@@ -102,7 +94,7 @@ input[type=range]::-ms-track {
   }
   p {
     display: inline-block;
-    padding: 0px 15px;
+    padding: 0px 5px;
     &:not(:first-child) {
       border-left: 1px solid rgba(147, 160, 162, 0.3);
     }
@@ -141,14 +133,6 @@ input[type=range]::-ms-track {
     }
 
   }
-  h1 {
-    font-size: 1.5em;
-  }
-  @media (max-width: 800px) {
-    h1  {
-      font-size: 1.3em;
-    }
-  }
 }
 
 //-----------------------------------------------------------------------
@@ -181,30 +165,6 @@ input[type=range]::-ms-track {
       box-sizing: border-box;
       p, h2 {
         color: white;
-        @media (max-width: 800px) {
-          font-size: 0.8em;
-        }
-        @media (max-width: 600px) {
-          font-size: 0.5em;
-        }
-        @media (max-width: 500px) {
-          font-size: 0.4em;
-        }
-      }
-      h2 {
-        font-size: 2em;
-        @media (max-width: 1000px) {
-          font-size: 1.5em;
-        }
-        @media (max-width: 700px) {
-          font-size: 1em;
-        }
-        @media (max-width: 500px) {
-          font-size: 0.8em;
-        }
-        @media (max-width: 400px) {
-          font-size: 0.6em;
-        }
       }
       button {
         background-color: black;
@@ -215,16 +175,6 @@ input[type=range]::-ms-track {
         bottom: 10%;
         width: 50%;
         height: 15%;
-        font-size: 1em;
-        @media (max-width: 800px) {
-          font-size: 0.8em;
-        }
-        @media (max-width: 600px) {
-          font-size: 0.6em;
-        }
-        @media (max-width: 420px) {
-          font-size: 0.4em;
-        }
       }
     }
   }
@@ -239,28 +189,6 @@ input[type=range]::-ms-track {
   .cell {
     padding: 5em 0px 3em 1em;
     vertical-align: top;
-    h2 {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1.1em;
-    }
-    @media (max-width: 800px) {
-      h2 {
-        font-size: 1.5em;
-      }
-      p {
-        font-size: 0.9em;
-      }
-    }
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 1.2em;
-      }
-      p {
-        font-size: 0.7em;
-      }
-    }
     &:first-child {
       color: grey;
       padding-right: 1em;
@@ -276,7 +204,6 @@ input[type=range]::-ms-track {
           float: right;
           color: $blue;
           padding: 1em 0px;
-          font-size: 1.5em;
         }
         h2 {
           margin-bottom: 1em;
@@ -299,7 +226,6 @@ input[type=range]::-ms-track {
       h3 {
         display: inline-block;
         float: left;
-        font-size: 1.5em;
         padding: 1em;
         padding-left: 0px;
         span {
@@ -311,7 +237,6 @@ input[type=range]::-ms-track {
         color: $blue;
         padding: 1em 0px;
         padding-right: 20%;
-        font-size: 1.5em;
       }
       #money, #time {
         width: 100%;
@@ -321,7 +246,7 @@ input[type=range]::-ms-track {
           color: grey;
           &:first-child {
             float: left;
-            text-indent: 15px;
+            text-indent: 0.15em;
           }
           &:last-child {
             float: right;
@@ -458,6 +383,23 @@ input[type=range]::-ms-track {
             background-size: 40%;
           }
         }
+        @media (max-width: 400px) {
+          input[type=range]::-moz-range-thumb {
+            width: 30px;
+            height: 20px;
+            background-size: 40%;
+          }
+          input[type=range]::-webkit-slider-thumb {
+            width: 30px;
+            height: 20px;
+            background-size: 40%;
+          }
+          input[type=range]::-ms-thumb {
+            width: 30px;
+            height: 20px;
+            background-size: 40%;
+          }
+        }
       }
     }
   }
@@ -478,43 +420,16 @@ input[type=range]::-ms-track {
     }
   }
   h2 {
-    font-size: 2.5em;
     padding-top: 1em;
     padding-bottom: 10px;
   }
   p {
-    font-size: 1.2em;
   }
   button {
     margin-top: 2em;
     color: white;
     background-color: black;
     border: 0px;
-    font-size: 1.5em;
-  }
-  @media (max-width: 1060px) {
-    h2, button {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1em;
-    }
-  }
-  @media (max-width: 800px) {
-    h2, button  {
-      font-size: 1.5em;
-    }
-    p {
-      font-size: 0.8em;
-    }
-  }
-  @media (max-width: 600px) {
-    h2, button  {
-      font-size: 1em;
-    }
-    p {
-      font-size: 0.5em;
-    }
   }
 }
 
@@ -526,22 +441,20 @@ input[type=range]::-ms-track {
   background-color: white;
   div {
     color: grey;
-    padding: 2em;
+    text-align: left;
+    &:nth-child(1) {
+      padding-left: 15px;
+    }
+    &:nth-child(2) {
+      @for $i from 0 through 5 {
+        @media (max-width: 1300px - 200px*$i) {
+          padding: 0px 2em - 0.3em*$i;
+        }
+      }
+    }
+
     h2, li {
       padding: 0.5em 0px;
-    }
-    h2 {
-      font-size: 1.5em;
-    }
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 1.2em;
-      }
-    }
-    @media (max-width: 500px) {
-      h2 {
-        font-size: 1em;
-      }
     }
     li {
       list-style-type: square;
@@ -565,15 +478,7 @@ input[type=range]::-ms-track {
   p {
     padding: 15px 0 0 15px;
   }
-  @media (max-width: 600px) {
-    p {
-      font-size: 0.8em;
-    }
-  }
   div {
-    &:first-child {
-
-    }
     &:nth-child(2) {
       text-align: left;
       p {
